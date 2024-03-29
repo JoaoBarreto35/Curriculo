@@ -20,11 +20,13 @@ body, html {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: small;
+    font-size: 17px;
   }
   @media only screen and (max-width: 600px) {
     nav a{
-      font-size: 12px;
+      
+      max-width: 25%;      
+      
     }
   }
   nav a:hover {
