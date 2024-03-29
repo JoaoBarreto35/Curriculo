@@ -2,7 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /*Melhora experiÊncia do menu*/
   }
   /*Menu*/  
   nav {
@@ -53,6 +53,7 @@ body, html {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 10;
   }
 
  /*Comeca as partes especificas*/ 
@@ -60,7 +61,7 @@ body, html {
 .timeline {
   position: relative;
   width: 100%;
-  height: auto; /* Altura automática para acomodar todos os contêineres */
+  height: auto; /* Altura automática para acomodar todos os contêineres, eu deveria ter colocado altura maxima, mas nao sabia extamente como */
 }
 
 .timeline::after {
@@ -86,7 +87,7 @@ body, html {
   background-color: white;
   border-radius: 4px;
   position: relative;
-  /*z-index: 1;*/
+  /*z-index: 1;*/ /*Inicialmente os containers estavam sobrepondo a linha do meio, ai coloquei isso, mas ja nao era mais necessário*/
 }
 
 .container.right {
@@ -105,21 +106,69 @@ body, html {
   background-color: #333;
   border-radius: 50%;
   z-index: 2;
-  left: 50%; /* Posiciona o marcador no início do contêiner */
+  left: 50%; /* Posiciona o marcador no meio do container */
   transform: translateY(-50%);
 }
+/*Marcadores cima e baixo*/
 .container.left:before{
   top: -5%;
 }
 .container.right:before{
   top: 105%;
 }
-/* Responsividade */
-@media screen and (max-width: 600px) {
+/* Responsividade */ /*tentaiva de responsividade -> agora tentarei vertical*/
+@media only screen and (max-width: 600px) {
+  .timeline{
+    max-height: 100vh;
+  }
   .container {
-    width: calc(100% - 40px); /* Ajuste a largura para a tela inteira em dispositivos móveis */
+    width: 60%; /* Faz com que os contêineres ocupem a largura total da tela */
+    margin-bottom: 20px; /* Reduz o espaço entre os contêineres */
+    z-index: 2;
+  }
+
+  .container .content {
+    padding: 2px; /* Reduz o preenchimento */
+  }
+
+  .container.right,
+  .container.left {
+    top: 0; /* Posiciona todos os contêineres na mesma altura */
+  }
+
+  .container::before {
+    width: 10px; /* Reduz o tamanho do marcador */
+    height: 10px;
+  }
+  .container::before{
+    display: none;
+  }
+ 
+  .left{
+    float: left;
+  }
+  .right{
+    float: right;
+  }
+  h2{
+    font-size: small;
+  }
+  p{
+    font-size: x-small;
+  }
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px; /* Largura da linha */
+    height: 100%; /* Altura para corresponder ao elemento pai */
+    background-color: #333; /* Cor da linha */
+    top: 0;
+    left: 50%; /* Posiciona no meio horizontalmente */
+    transform: translateX(-50%); /* Centraliza exatamente no meio */
+    z-index: 1;
   }
 }
+
 /*portfolio*/
 #port{
   width: 100%;
@@ -129,8 +178,27 @@ body, html {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-}
 
+}
+iframe{
+  width: 80%;
+  height: auto;
+  width: 42%;
+  height: 60%;
+}
+@media screen and (max-width: 600px) {
+  #port{
+    
+    display: block;
+    position: absolute;
+  }  
+  iframe{
+    height: 100%;
+    width: 80%;
+    height: 40%;
+    margin: 3%;
+  }
+}
 /*contato*/
 form {
   display: flex;
@@ -166,4 +234,14 @@ button:hover {
   max-width: 100%;
   height: 30%;
   
+}
+
+#texto-sobre-mim{
+  width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  #texto-sobre-mim{
+    width: 90%;
+  }
 }
