@@ -57,7 +57,11 @@ body, html {
   @media only screen and (max-width: 600px){
     .item{
       width: 80%;
-      height: 60%;
+      height: 40%;
       font-size: medium;
+      margin-top: 7%;
+    }
+    footer{
+      display: none;
     }
   }
