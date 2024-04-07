@@ -47,7 +47,7 @@ body, html {
   #sobre-mim { background-color: #f2f2f2; }
   #historico { background-color: #e6e6e6; }
   #portfolio { background-color: #cccccc;}
-  #contato { background-color: #bfbfbf;}
+  #contato { background-color: #bfbfbf; height: 80vh;}
   
 
   /*Roda pé*/
@@ -56,7 +56,7 @@ body, html {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+   /* position: fixed; */
     bottom: 0;
     width: 100%;
     z-index: 10;
@@ -186,24 +186,36 @@ body, html {
   align-items: center;
 
 }
-iframe{
+.opcao{
   width: 80%;
   height: auto;
   width: 42%;
   height: 60%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+.opcao:hover{
+  transform: scale(1.5,1.5);
+  z-index: 3;
+  
 }
 @media screen and (max-width: 600px) {
   #port{
     
-    display: block;
-    position: absolute;
+    display: flex;
+    max-height: 50%;
   }  
-  iframe{
-    height: 100%;
-    width: 80%;
-    height: 40%;
-    margin: 3%;
+  .opcao{
+    height: 200PX;
+    width: 200PX;
+  
+   
+   
   }
+  
+  
 }
 /*contato*/
 form {

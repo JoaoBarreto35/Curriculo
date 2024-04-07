@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>João Vitor Barreto Pereira</title>
+<title>João Barreto</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" type="imagex/png" href="Imagens/LOGO1.ico">
 </head>
 <body>
 <!--Menu navegação-->
@@ -59,9 +60,11 @@
 
 <!--No portfolio utilizei dois iframes de trabalhos meus-->
 <div id="portfolio" class="section">
+  <h1 style="margin-top: 7%;">Portfólio</h1>
+  <p>Ecolha entre meu projetos em Power BI e em HTML5</b></p>
   <div id="port">
-    <iframe title="Prazo de atendimento - GPX" src="https://app.powerbi.com/view?r=eyJrIjoiMWI2MWNmMDQtMjAxYy00YmJkLTg0YjgtN2ZkMmE4ZWU5NGFiIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0" allowFullScreen="true" ></iframe>
-    <iframe title="Prazo de atendimento - GPX" src="https://app.powerbi.com/view?r=eyJrIjoiMzljNjQxOTEtNDQzZC00NWFkLWI0MDgtYjY5MDM4MWFmYzlkIiwidCI6ImJkZTZkZmRjLTVhNGEtNDA5OS04YjkyLWFlZDViMDNmYWY0MiJ9" frameborder="0" allowFullScreen="true" ></iframe>
+    <div onclick="window.location='powerbi.html';" class="opcao" style="background-image: url(Imagens/icons/Microsoft\ Power\ BI.png);"></div>
+    <div class="opcao" style="background-image: url(Imagens/icons/html5.png);"></div>
   </div>
 
 </div>
@@ -73,10 +76,10 @@
     <input type="text" name="nome" placeholder="Seu nome" required>
     <input type="email" name="email" placeholder="Seu e-mail" required>
     <textarea name="mensagem" placeholder="Sua mensagem" rows="4" required></textarea>
-    <button type="submit">Enviar</button>
+    <button>Enviar</button>
+    <!--type="submit"-->
   </form>
 </div>
-
 <!--Rodapé só pra dizer que tem-->
 <footer>
   <p>© 2024 João Vitor Barreto Pereira</p>
