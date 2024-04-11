@@ -349,7 +349,7 @@ button:hover {
   height: 100%;
 }
 #sobre-mim .direita{
-  width: 35%;
+  width: 60%;
   height: 100%;
   font-size: x-large;
   color: gray;
@@ -369,19 +369,23 @@ button:hover {
 @media screen and (max-width: 600px){
   #sobre-mim .esquerda{
     width: 100%;
-    height: 120px;
+    height: 90px;
   }
   #sobre-mim .direita{
     width: 90%;
     height: 60%;
-    font-size: large;
+    font-size: medium;
     color: gray;
     text-align: center;
     margin-left: 5%;
+    margin-top: 5%;
   }  
   #sobre-mim .conteudo{
     width: 100%;
     display: block;
     
+  }
+  #sobre-mim h1{
+    font-size: large;
   }
 }
