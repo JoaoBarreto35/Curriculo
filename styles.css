@@ -64,6 +64,9 @@ body, html {
       width: 50%;
     }
     
+    body, html {
+        width: 100%;
+    }
   }
   nav a:hover {
     transform: scale(1.05,1.05);
