@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos para o slider */
+        .slider-container {
+            display: flex;
+            overflow: hidden;
+            width: 50vw; /* Largura metade da tela */
+            height: 50vh; /* Altura metade da tela */
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 200%; /* Sete slides */
+        }
+
+        .slide {
+            flex: 0 0 14.28%; /* Cada slide ocupa 1/7 do slider */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Cores diferentes para os slides */
+        .slide:nth-child(1) { background-color: #FF5733; }
+        .slide:nth-child(2) { background-color: #3498DB; }
+        .slide:nth-child(3) { background-color: #F39C12; }
+        .slide:nth-child(4) { background-color: #27AE60; }
+        .slide:nth-child(5) { background-color: #9B59B6; }
+        .slide:nth-child(6) { background-color: #E74C3C; }
+        .slide:nth-child(7) { background-color: #34495E; }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">Slide 1</div>
+            <div class="slide">Slide 2</div>
+            <div class="slide">Slide 3</div>
+            <div class="slide">Slide 4</div>
+            <div class="slide">Slide 5</div>
+            <div class="slide">Slide 6</div>
+            <div class="slide">Slide 7</div>
+        </div>
+    </div>
+
+    <!-- Radio buttons para controlar o slider -->
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <input type="radio" name="slider" id="slide4">
+    <input type="radio" name="slider" id="slide5">
+    <input type="radio" name="slider" id="slide6">
+    <input type="radio" name="slider" id="slide7">
+</body>
+</html>
