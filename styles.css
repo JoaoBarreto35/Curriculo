@@ -680,4 +680,8 @@ button:hover {
     cursor: pointer;
     transition: 0.4s ease-in-out;
   }
+  #portfolio h3{
+    width: 85%;
+    font-size: medium;
+  }
 }
