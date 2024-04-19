@@ -96,6 +96,7 @@ body, html {
   #resumo { background-color: white; }
   #historico { background-color: #e6e6e6; }
   #portfolio { background-color: #cccccc;}
+  #citacao { background-color: #252424;}
   #contato { background-color: #bfbfbf; margin-bottom: 0;}
   
   /*Comeca as partes especificas*/ 
@@ -780,4 +781,18 @@ button:hover {
     width: 85%;
     font-size: medium;
   }
+}
+
+/*CITACAO*/
+
+blockquote {
+  font-size: 65px;
+  line-height: 1.5;
+  color: #dbd6d6;
+}
+
+cite {
+  font-style: normal;
+  font-size: 30px;
+  color: #777;
 }
