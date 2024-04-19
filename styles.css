@@ -7,8 +7,14 @@ body, html {
   a {
     text-decoration: none;
 }
-
-
+:root{
+  --cor-tema: #3498db;
+}
+ .titulo-cor{
+  color: var(--cor-tema);
+  font-family: 'lora-regular', serif;
+  font-size: medium;
+ }
   /*Menu*/  
   .icon-menu{
     display: block;
@@ -104,7 +110,7 @@ body, html {
   /*Pagina Inicio*/
   #inicio h5{
     font-size: large;
-    color: aqua;
+    color: var(--cor-tema);
     height: auto;
     /*background-color: white;*/
     margin: 0;
@@ -127,8 +133,8 @@ body, html {
     border-style: solid;
   }
   #inicio .mini-menu:hover{
-    border-color: aqua;
-    /*color: aqua;*/
+    border-color: var(--cor-tema);
+    /*color: var(--cor-tema);*/
     cursor: pointer;
   }
   #inicio h1{
@@ -603,7 +609,7 @@ button:hover {
   transition: 0.4s ease-in-out;
 }
 .bar:hover{
-  background-color: black;
+  background-color: var(--cor-tema);
  
 }
 #portfolio input{
@@ -738,8 +744,8 @@ button:hover {
   
 }
 .btn-site:hover{
-  color: aqua;
-  border-color: aqua;
+  color: var(--cor-tema);
+  border-color: var(--cor-tema);
 }
 .slide:hover{
   transform: rotateY(180deg);
