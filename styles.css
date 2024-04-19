@@ -20,7 +20,7 @@ body, html {
     display: block;
     position: fixed;
     z-index: 10;
-    background-image: url(Imagens/icons/icon-menu.png);
+    background-image: url(Imagens/icons/menu.png);
     width: 13%;
     height: 45px;
     background-repeat: no-repeat;
@@ -103,7 +103,7 @@ body, html {
   #historico { background-color: #e6e6e6; }
   #portfolio { background-color: #cccccc;}
   #citacao { background-color: #252424;}
-  #contato { background-color: #bfbfbf; margin-bottom: 0;}
+  #contato { background-color: black; margin-bottom: 0;}
   
   /*Comeca as partes especificas*/ 
 
@@ -352,33 +352,7 @@ body, html {
   
 }
 /*contato*/
-form {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-}
-input, textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-button {
-  padding: 10px 20px;
-  background-color: yellow;
-  color: black;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: rgb(150, 150, 13);
-}
-@media screen and (max-width: 600px) {
-  form {
-    width: 90%;
-  }
-}
+
 
 /*sobre mim*/
 
@@ -813,4 +787,76 @@ cite {
     font-size: 20px;
     color: #777;
   }
+}
+/*itens*/
+.itens{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.itens-img{
+  height: 100%;
+  width: 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px;
+}
+@media screen and (max-width: 600px){
+.itens{
+  display: flex;
+  flex-wrap: wrap;
+}
+.itens-container{
+  height: auto;
+}
+.itens-img{
+  height: 25%;
+  width: 25%;
+}
+}
+
+
+/*contato*/
+.redes-sociais{
+  height: 45px;
+  width: 45px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  margin-inline: 10px;
+}
+#contato p{
+  color: #cccccc;
+  font-size: large;
+  margin-bottom: 90px;
+}
+#contato h2{
+  height: auto;
+  text-align: center;
+  font-family: "poppins-bold", sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+  
+  margin-bottom: 0;
+}
+.btn-send-email{
+  display: flex;
+  padding: 15px;
+  width: 400px;
+  height: 45px;
+  background-color: var(--cor-tema);
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+  font-family: "poppins-bold", sans-serif;
+  letter-spacing: .2rem;
+  line-height: 6.6rem;
+  font-size: 1.5rem;
+
 }
