@@ -863,3 +863,9 @@ cite {
 .btn-send-email:hover{
   background-color: #103853;
 }
+
+@media screen and (max-width: 600px){
+  .btn-send-email{
+    width: 80%;
+  }
+  }
