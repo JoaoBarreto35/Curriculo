@@ -9,6 +9,7 @@ body, html {
 }
 :root{
   --cor-tema: #3498db;
+  --altura-item: 45px;
 }
  .titulo-cor{
   color: var(--cor-tema);
@@ -16,75 +17,68 @@ body, html {
   font-size: medium;
  }
   /*Menu*/  
-  .icon-menu{
-    display: block;
-    position: fixed;
-    z-index: 10;
-    background-image: url(Imagens/icons/menu.png);
-    width: 13%;
-    height: 45px;
-    background-repeat: no-repeat;
-    background-size:  contain;
-    margin: 15px;
-    right: 15px;
-    background-position: right;
-    background-color: rgba(51, 51, 51, 0); /* Começa transparente */
-    transition: background-color 0.5s ease-in-out; /* Transição suave para a cor do fundo */
-  
-    z-index: 11;
-    }
-    .icon-menu.active {
-      /*background-color: rgba(51, 51, 51, 1); */ /* Cor final do menu */
-      background-image: url(Imagens/icons/icon-menu-fechar.png);
-    }
-  
-    #menu {
-      background-color: black;
-      overflow: hidden;
-      position: fixed;
-      width: 13%;
-      z-index: 10;
-      height: auto;
-      margin: 15px;
-      right: 15px;
-      margin-top: 15px;
-      visibility: hidden; /* Alterado de display para visibility */
-      opacity: 0; /* Inicialmente invisível */
-      transition: height 0.1s, width 0.5s, visibility 0s, opacity 0.1s linear; /* Adicionado transição */
-      
-    }
-    
-    
-    /* Estilo dos Links do Menu */
-    #menu a {
-      
-      width: 100%;
-      float: left;
-      color: white;
-      text-align: left;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      height: 10%;
-      
-    }
-    
-  @media only screen and (max-width: 600px) {
-    #menu, .icon-menu{
-      margin-top: 30px;
-      width: 50%;
+ .menu{
+        overflow: hidden;
+        width: 80px;
+        background-color: transparent;
+        height: 50px;
+        transition: .6s;
+        color: gray;
 
+        position: fixed;
+        margin: 22px;
+
+        z-index: 99;
+    }
+    nav{
+        width: 100%;
+        nav-index: nav-down;   
+    }
+    .item{
+        width: 100%;
+        float: left;
+        cursor: pointer;
+        text-decoration: none;
+        color: #bfbfbf;
+        text-indent: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .item, .menu-icon, .menu, .item-vazio{
+        height: var(--altura-item);
+        
     }
     
-    body, html {
-        margin: auto;
+    .menu-icon{
+        float: right;
+        background-image: url(Imagens/icons/menu.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left;
+       
     }
-  }
-  nav a:hover {
-    transform: scale(1.05,1.05);
-    
-  }
+
+    .menu:hover{
+        height: 315px;
+        width: 200px;
+        background-color: black;
+        
+    }
+    .menu:hover .menu-icon{
+        visibility: hidden;
+        
+    }
+    .item:hover{
+        background-color: var(--cor-tema);
+        color: white;
   
+    }
+    
+    .item:active .menu:hover{
+      width: 80px;
+      background-color: transparent;
+      height: 50px;
+    }
 
   /*Base geral dos sites*/
   .section {
